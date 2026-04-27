@@ -1,0 +1,447 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: S1_R3_R4
+meta:
+  id: wrk_511ef9c7f3134f6bac57560b18388a2c
+  created: 1774888566738
+  modified: 1774888566738
+  description: ""
+collection:
+  - name: Categoria
+    meta:
+      id: fld_daff6496f7c646d7945e354c202767fd
+      created: 1774894759368
+      modified: 1774897462656
+      sortKey: -1774894759368
+      description: ""
+    children:
+      - url: localhost:8080/categorias
+        name: selecionar
+        meta:
+          id: req_1ab411aa7acf438085fcb44951d433bd
+          created: 1774889281154
+          modified: 1774894765581
+          isPrivate: false
+          description: ""
+          sortKey: -1774894765564
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias
+        name: criar
+        meta:
+          id: req_2c2b38450f094b1cb0a682de9cfc54b8
+          created: 1774891910383
+          modified: 1774894777382
+          isPrivate: false
+          description: ""
+          sortKey: -1774894765864
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Eletrônicosss",
+              "descricao": "Produtos de tecnologia e gadgetss"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias/1
+        name: delete
+        meta:
+          id: req_17fa2b617e444577bf2b9b3d43850a0a
+          created: 1774892774164
+          modified: 1774894771630
+          isPrivate: false
+          description: ""
+          sortKey: -1774894765764
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias?id=5
+        name: atualizar
+        meta:
+          id: req_68b1258eebf64186876100e2d8fb4e50
+          created: 1774893246585
+          modified: 1774894769833
+          isPrivate: false
+          description: ""
+          sortKey: -1774894765664
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Eletrônicos45s",
+              "descricao": "Produtos de tecnologia e penis"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produto
+    meta:
+      id: fld_49ad1b6323394b1e8379d76a567a2886
+      created: 1775147836401
+      modified: 1775152160620
+      sortKey: -1775147836401
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: CRIAR
+        meta:
+          id: req_6681fcdaad5946f8bb3ef03ae421042b
+          created: 1775147840106
+          modified: 1775155245673
+          isPrivate: false
+          description: ""
+          sortKey: -1775147848638
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "2"
+              description: ""
+              disabled: false
+              multiline: false
+              type: text
+            - name: nome
+              value: Produto teste
+              description: ""
+              disabled: false
+            - name: valor
+              value: "1000"
+              description: ""
+              disabled: false
+            - name: imagem
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\47808335827\Downloads\pngtree-apple-iphone-11-pro-max-clear-case-3d-render-png-image_11742978.png
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: SELECIONAR
+        meta:
+          id: req_d39b2f9d6ef84dfaa9d5c776f4451fee
+          created: 1775150911695
+          modified: 1775150916167
+          isPrivate: false
+          description: ""
+          sortKey: -1775021307251
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "2"
+              description: ""
+              disabled: false
+              multiline: false
+              type: text
+            - name: nome
+              value: Produto teste
+              description: ""
+              disabled: false
+            - name: valor
+              value: "1000"
+              description: ""
+              disabled: false
+            - name: imagem
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\47808335827\Pictures\download tenis.jpg
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/5
+        name: DELETAR
+        meta:
+          id: req_5338b90b210a4c23bf17c58a16e2178c
+          created: 1775150935595
+          modified: 1775155267934
+          isPrivate: false
+          description: ""
+          sortKey: -1775084577944.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos?id=5
+        name: ATUALIZAR
+        meta:
+          id: req_c30c668733c04ef68383a5781d578f7b
+          created: 1775151592325
+          modified: 1775151942052
+          isPrivate: false
+          description: ""
+          sortKey: -1775116213291.25
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "2"
+              description: ""
+              disabled: false
+              multiline: false
+              type: text
+            - name: nome
+              value: Produto atualizado
+              description: ""
+              disabled: false
+            - name: valor
+              value: "320"
+              description: ""
+              disabled: false
+            - name: imagem
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\47808335827\Pictures\download tenis.jpg
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Cliente
+    meta:
+      id: fld_efcfb5b8e8894849b9e69b15a39858f3
+      created: 1775494244548
+      modified: 1777287913924
+      sortKey: -1775494244548
+      description: ""
+    children:
+      - url: http://localhost:8080/clientes
+        name: Criar
+        meta:
+          id: req_60b4742392cc41c79511c9a6ef212281
+          created: 1775494253168
+          modified: 1776097941205
+          isPrivate: false
+          description: ""
+          sortKey: -1775494324146
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "João Silva",
+              "cpf": "12345678901",
+              "cep": "01001000",
+              "numero": "100",
+              "complemento": "apto 10",
+              "telefones": [
+                "11999999999",
+                "11888888888"
+              ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes
+        name: Listar
+        meta:
+          id: req_a07df63dc2234760a0e683eb95022d02
+          created: 1775494516071
+          modified: 1775496268394
+          isPrivate: false
+          description: ""
+          sortKey: -1775494324246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/4
+        name: DELETAR
+        meta:
+          id: req_0f546a2adce14c7ea56311d69005caf2
+          created: 1775496240328
+          modified: 1776099136561
+          isPrivate: false
+          description: ""
+          sortKey: -1775494324196
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes?id=5
+        name: Atualizar
+        meta:
+          id: req_c19fd4cfe4ab4a1cbab070c528f6aa67
+          created: 1777287916482
+          modified: 1777288709474
+          isPrivate: false
+          description: ""
+          sortKey: -1775494324346
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "João Silva Atualizado",
+              "cpf": "12345678901",
+              "cep": "01001000",
+              "numero": "200",
+              "complemento": "apto 20",
+              "telefones": [
+                "11911111111",
+                "11822222222"
+              ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_d109289e7ac1d7b59219348448b26fce7eef956a
+    created: 1774888566762
+    modified: 1774888566762
+environments:
+  name: Base Environment
+  meta:
+    id: env_d109289e7ac1d7b59219348448b26fce7eef956a
+    created: 1774888566751
+    modified: 1774888566751
+    isPrivate: false
